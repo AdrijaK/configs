@@ -2,7 +2,7 @@
 
 **Danhead** is organized into three compute nodes. When running a nf-core pipeline, SLURM jobs are randomly assigned to these three possible compute nodes. The node priority is as follows:
 
-**dancmp02 > dancmp01 > dangpu**
+**dancmp02fl > dancmp01fl > dangpu01fl**
 
 If your job is small, it's likely that all the jobs will be completed within **dancmp02** and there will be no errors. However, when the jobs get distributed across the node lists, the nf-core pipeline may crash.
 
@@ -19,8 +19,8 @@ Caused by:
   Process ` ... blabla ... ` terminated for an unknown reason -- Likely it has been terminated by the external system
 ```
 
-To prevent the pipelines from crashing, you need to explicitly configure all the SLURM jobs to land on the same nodelist. Since **dancmp01** has the largest available memory, we have configured the profile **ku_sund_danhead** to use that node for nf-core computations.
-To use the **ku_sund_danhead** profile, remember explicitly state which node list you are launching the nf-core pipeline from when you start a new SLURM interactive session:
+To prevent the pipelines from crashing, you need to explicitly configure all the SLURM jobs to land on the same nodelist. Currently we have configured the profile **ku_sund_danhead** to use **dancmp02fl** for nf-core computations.
+To use the **ku_sund_danhead** profile, remember to explicitly state the nodelist when starting a new SLURM interactive session:
 
 ```bash
 tmux new-session -s my_slurm_session
@@ -29,7 +29,7 @@ nextflow run nf-core/rnaseq -profile ku_sund_danhead [MORE OPTIONS HERE]
 ```
 
 
-If you want to determine yourself which node list you will use for your nf-core jobs, use these three steps:
+Alternatively, if you want to choose yourself which node list you will use for your nf-core jobs, use these three steps:
 
 **Step 1**: Start a new SLURM interactive session. Explicitly state which node list you are launching the nf-core pipeline from:
 
