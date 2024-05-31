@@ -1,4 +1,7 @@
-# nf-core configuration for DANHEAD 
+# nf-core/configs: configuration for KU_SUND_DANHEAD
+All nf-core pipelines have been successfully configured for use on the DANGPU server at the Novo Nordisk Foundation Center for Stem Cell Medicine (reNEW) at the University of Copenhagen.
+
+To use the institution profile, run the pipeline with -profile ku_sund_dangpu. This will download and launch the ku_sund_dangpu.config which has been pre-configured with a setup suitable for the DANGPU.
 
 **Danhead** is organized into three compute nodes. When running a nf-core pipeline, SLURM jobs are randomly assigned to these three possible compute nodes. The node priority is as follows:
 
