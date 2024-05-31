@@ -41,7 +41,8 @@ srun -c 2 --nodelist=dancmpn02fl --mem=8gb --time=0-01:00:00 --pty bash #availab
 
 ```bash
 process {
-        clusterOptions = '-w dancmpn02fl' //available options: dancmpn02fl, dancmpn02fl, dangpu
+  //available options: dancmpn02fl, dancmpn02fl, dangpu
+  clusterOptions = '-w dancmpn02fl' 
 }
 ```
 
