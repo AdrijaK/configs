@@ -24,7 +24,7 @@ To use the **ku_sund_danhead** profile, remember explicitly state which node lis
 
 ```bash
 tmux new-session -s my_slurm_session
-srun -c 2 --nodelist=dancmpn01fl --mem=8gb --time=0-01:00:00 --pty bash
+srun -c 2 --nodelist=dancmpn02fl --mem=8gb --time=0-01:00:00 --pty bash
 nextflow run nf-core/rnaseq -profile ku_sund_danhead [MORE OPTIONS HERE]
 ```
 
@@ -34,15 +34,15 @@ If you want to determine yourself which node list you will use for your nf-core 
 **Step 1**: Start a new SLURM interactive session. Explicitly state which node list you are launching the nf-core pipeline from:
 
 ```bash
-srun -c 2 --nodelist=dancmpn02fl --mem=8gb --time=0-01:00:00 --pty bash #available options: dancmpn02fl, dancmpn02fl, dangpu
+srun -c 2 --nodelist=dancmpn01fl --mem=8gb --time=0-01:00:00 --pty bash #available options: dancmpn02fl, dancmpn02fl, dangpu
 ```
 
 **Step 2**: Configure the `my.conf` file to send all the jobs to the same node list. The `my.conf` file should include this bit:
 
 ```bash
 process {
-  //available options: dancmpn02fl, dancmpn02fl, dangpu
-  clusterOptions = '-w dancmpn02fl' 
+  //available options: dancmpn01fl, dancmpn02fl, dangpu
+  clusterOptions = '-w dancmpn01fl' 
 }
 ```
 
