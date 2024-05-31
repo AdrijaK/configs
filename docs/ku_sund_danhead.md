@@ -1,4 +1,4 @@
-
+# nf-core configuration for DANHEAD 
 
 **Danhead** is organized into three compute nodes. When running a nf-core pipeline, SLURM jobs are randomly assigned to these three possible compute nodes. The node priority is as follows:
 
