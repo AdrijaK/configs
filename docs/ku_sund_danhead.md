@@ -50,9 +50,9 @@ process {
 
 ```bash
 nextflow run nf-core/rnaseq \
- -profile ku_sund_dangpu \
--c my.conf \
-[MORE OPTIONS HERE]
+  -profile ku_sund_dangpu \
+  -c my.conf \
+  [MORE OPTIONS HERE]
 ```
 
 This will ensure that all the jobs will be sent to the same node list.
