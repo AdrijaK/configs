@@ -48,7 +48,8 @@ srun -c 2 --nodelist=dancmpn01fl --mem=8gb --time=0-01:00:00 --pty bash #availab
 
 ```bash
 process {
-  //available options: dancmpn01fl, dancmpn02fl, dangpu (but dangpu is not recommended for running pipelines)
+  //available options: dancmpn01fl, dancmpn02fl, dangpu
+  //dangpu is not recommended for running nf-core pipelines
   clusterOptions = '-w dancmpn01fl' 
 }
 ```
