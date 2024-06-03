@@ -1,7 +1,7 @@
 # nf-core/configs: configuration for KU_SUND_DANHEAD
 All nf-core pipelines have been successfully configured for use on the DANHEAD server at the Novo Nordisk Foundation Center for Stem Cell Medicine (reNEW) at the University of Copenhagen.
 
-To use the institution profile, run the pipeline with `-profile ku_sund_dangpu`. This will download and launch the `ku_sund_dangpu.config` which has been pre-configured with a setup suitable for the DANHEAD.
+To use the institution profile, run the pipeline with `-profile ku_sund_danhead`. This will download and launch the `ku_sund_danhead.config` which has been pre-configured with a setup suitable for the DANHEAD.
 
 ## What you need to know before running nf-core pipleines on DANHEAD
 
