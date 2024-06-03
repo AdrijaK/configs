@@ -34,6 +34,8 @@ nextflow run nf-core/rnaseq -profile ku_sund_danhead [MORE OPTIONS HERE]
 ```
 
 
+## If you want to manually choose which node to use on DANHEAD
+
 Alternatively, if you want to choose yourself which node list you will use for your nf-core jobs, use these three steps:
 
 **Step 1**: Start a new SLURM interactive session. Explicitly state which node list you are launching the nf-core pipeline from:
@@ -46,7 +48,7 @@ srun -c 2 --nodelist=dancmpn01fl --mem=8gb --time=0-01:00:00 --pty bash #availab
 
 ```bash
 process {
-  //available options: dancmpn01fl, dancmpn02fl, dangpu
+  //available options: dancmpn01fl, dancmpn02fl, dangpu (but dangpu is not recommended for running pipelines)
   clusterOptions = '-w dancmpn01fl' 
 }
 ```
